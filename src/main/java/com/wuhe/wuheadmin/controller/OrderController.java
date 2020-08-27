@@ -1,7 +1,7 @@
 package com.wuhe.wuheadmin.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @ClassName OrderController
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version 1.0
  **/
 
-@RestController
+@Controller
 @RequestMapping("/order")
 public class OrderController {
 

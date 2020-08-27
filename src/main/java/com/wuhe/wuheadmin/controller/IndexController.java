@@ -1,9 +1,7 @@
 package com.wuhe.wuheadmin.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @ClassName IndexController
@@ -12,13 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version 1.0
  **/
 
-@RestController
+@Controller
 public class IndexController {
 
-    @RequestMapping(method = RequestMethod.GET,value = "/")
-    @ResponseBody
+//    @RequestMapping(method = RequestMethod.GET,value = "/")
+//    @ResponseBody
+    @RequestMapping("/")
     public String index(){
-        return "Hello World! this is WuHeWeb !!";
+        return "index";
+    }
+
+    @RequestMapping("/toUser")
+    public String toUser(){
+        return "index";
     }
 
 }
