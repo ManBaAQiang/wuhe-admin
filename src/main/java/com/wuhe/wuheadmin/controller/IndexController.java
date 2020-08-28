@@ -1,6 +1,7 @@
 package com.wuhe.wuheadmin.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -16,13 +17,16 @@ public class IndexController {
 //    @RequestMapping(method = RequestMethod.GET,value = "/")
 //    @ResponseBody
     @RequestMapping("/")
-    public String index(){
+    public String index(Model model){
+        model.addAttribute("name","wuheAdmin");
+
+
         return "index";
     }
 
     @RequestMapping("/toUser")
     public String toUser(){
-        return "index";
+        return "redirect:/user/index";
     }
 
 }
