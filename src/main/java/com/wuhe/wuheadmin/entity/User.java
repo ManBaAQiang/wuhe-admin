@@ -2,17 +2,18 @@ package com.wuhe.wuheadmin.entity;
 
 import org.apache.ibatis.annotations.Result;
 
+import java.io.Serializable;
+
 /**
  * @ClassName User
  * @Description :
  * @Date 2020/8/27 16:36
  * @Version 1.0
  **/
-public class User {
+public class User implements Serializable {
 
     private String userName;
     private Integer userId;
-
 
     private String desc;
 

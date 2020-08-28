@@ -42,6 +42,9 @@ public class UserController {
     User getUser(Integer userId) {
 
         User user = userService.queryUserInfo(userId);
+        if(user==null){
+            return new User();
+        }
         return user;
     }
 }
